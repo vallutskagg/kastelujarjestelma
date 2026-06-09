@@ -2,8 +2,11 @@
 
 Nykyiset KiCad-lahdetiedostot:
 
-- `irrigation_esp32_J8J9_KUVAN_MUKAINEN.kicad_sch`
-- `pcb.kicad_pcb`
+- `kastelujarjestelma_pcb_ja_schematic/irrigation_esp32_J8J9_KUVAN_MUKAINEN.kicad_pro`
+- `kastelujarjestelma_pcb_ja_schematic/irrigation_esp32_J8J9_KUVAN_MUKAINEN.kicad_sch`
+- `kastelujarjestelma_pcb_ja_schematic/irrigation_esp32_J8J9_KUVAN_MUKAINEN.kicad_pcb`
+- `kastelujarjestelma_pcb_ja_schematic/pcb.kicad_pro`
+- `kastelujarjestelma_pcb_ja_schematic/pcb.kicad_pcb`
 
 ## Tarkistettu
 
@@ -20,7 +23,6 @@ Nykyiset KiCad-lahdetiedostot:
 
 ## Korjattava ennen PCB:n tilaamista
 
-- KiCad-projektitiedosto `.kicad_pro` puuttuu.
 - Scheman ja PCB:n tiedostonimet eivat vastaa toisiaan.
 - Pumpun virtaliittimet `J1`, `J2` ja relekontaktin liitin `J10` puuttuvat
   nykyisesta schemasta ja PCB:sta.

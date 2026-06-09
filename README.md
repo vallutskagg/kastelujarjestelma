@@ -125,11 +125,9 @@ luoma **ESP-IDF PowerShell**, jossa `idf.py` on kaytettavissa.
 ### 2. Lataa projekti
 
 ```powershell
-git clone https://github.com/KAYTTAJANIMI/watering_system.git
-cd watering_system
+git clone https://github.com/vallutskagg/kastelujarjestelma.git
+cd kastelujarjestelma
 ```
-
-Korvaa osoite taman projektin oikealla GitHub-osoitteella.
 
 ### 3. Valitse kohde ja aseta tunnukset
 
@@ -330,13 +328,16 @@ hardware/pcb/
 Nykyiset KiCad-tiedostot:
 
 ```text
-hardware/pcb/irrigation_esp32_J8J9_KUVAN_MUKAINEN.kicad_sch
-hardware/pcb/pcb.kicad_pcb
+hardware/pcb/kastelujarjestelma_pcb_ja_schematic/
+  irrigation_esp32_J8J9_KUVAN_MUKAINEN.kicad_pro
+  irrigation_esp32_J8J9_KUVAN_MUKAINEN.kicad_sch
+  irrigation_esp32_J8J9_KUVAN_MUKAINEN.kicad_pcb
+  pcb.kicad_pro
+  pcb.kicad_pcb
 ```
 
-KiCad-projektitiedosto `.kicad_pro` puuttuu viela. Luo projekti KiCadissa ja
-tallenna projektitiedosto samaan kansioon. Projektikohtaiset KiCad-symbolit,
-footprintit ja kirjastotaulukot kuuluvat myos samaan kansioon.
+Avaa KiCad-projekti ensisijaisesti `.kicad_pro`-tiedostosta. Projektikohtaiset
+KiCad-symbolit, footprintit ja kirjastotaulukot kuuluvat samaan kansioon.
 
 Tallenna muokattava OpenSCAD-kotelomalli tahan kansioon:
 
