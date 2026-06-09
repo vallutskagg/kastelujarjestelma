@@ -1,0 +1,117 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Directory metadata
+.directory
+
+# Temporary files
+*~
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# Log files
+*.log
+
+# Build artifacts and directories
+**/build/
+build/
+*.o
+*.a
+*.out
+*.exe # For any host-side utilities compiled on Windows
+
+# ESP-IDF specific build outputs
+*.bin
+*.elf
+*.map
+flasher_args.json # Generated in build directory
+sdkconfig.old
+sdkconfig
+
+# Local secrets and credentials
+.env
+.env.*
+!.env.example
+secrets.*
+credentials.*
+*.key
+*.pem
+*.p12
+*.pfx
+
+# ESP-IDF dependencies
+# For older versions or manual component management
+/components/.idf/
+**/components/.idf/
+# For modern ESP-IDF component manager
+managed_components/
+# If ESP-IDF tools are installed/referenced locally to the project
+.espressif/
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+install_manifest.txt
+CTestTestfile.cmake
+
+# Python environment files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.egg-info/
+dist/
+
+# Virtual environment folders
+venv/
+.venv/
+env/
+
+# Language Servers
+.clangd/
+.ccls-cache/
+compile_commands.json
+
+# Local editor settings
+.vscode/
+
+# KiCad local, cache and backup files
+*-backups/
+.history/
+*.kicad_prl
+*.kicad_sch-bak
+*.kicad_pcb-bak
+*.kicad_pro-bak
+*.kicad_wks-bak
+*.kicad_sym-bak
+*.kicad_mod-bak
+*.kicad_dru-bak
+*.kicad_jobset-bak
+*.pretty-cache
+fp-info-cache
+~*.lck
+
+# Generated PCB manufacturing outputs
+hardware/pcb/generated/
+hardware/pcb/gerbers/
+hardware/pcb/**/gerbers/
+hardware/pcb/**/gerbers.zip
+
+# Generated 3D exports (the editable OpenSCAD source is committed)
+hardware/enclosure/generated/
+
+# Windows specific
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# User-specific configuration files
+*.user
+*.workspace # General workspace files, can be from various tools
+*.suo       # Visual Studio Solution User Options
+*.sln.docstates # Visual Studio

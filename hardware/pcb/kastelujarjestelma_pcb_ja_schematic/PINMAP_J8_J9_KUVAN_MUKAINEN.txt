@@ -1,0 +1,55 @@
+ESP32 DevKit 38-pin J8/J9 pinmap - KUVAN MUKAINEN
+
+J8 = vasen rima kuvassa, pin 1 ylhäällä, pin 19 alhaalla:
+J8 pin 01: 3V3
+J8 pin 02: NC_J8_2_EN
+J8 pin 03: NC_J8_3_GPIO36
+J8 pin 04: NC_J8_4_GPIO39
+J8 pin 05: SOIL_AO_GPIO34
+J8 pin 06: NC_J8_6_GPIO35
+J8 pin 07: NC_J8_7_GPIO32
+J8 pin 08: NC_J8_8_GPIO33
+J8 pin 09: GPIO25_TANK_LED
+J8 pin 10: GPIO26_RELAY
+J8 pin 11: GPIO27_TANK_SIG
+J8 pin 12: NC_J8_12_GPIO14
+J8 pin 13: NC_J8_13_GPIO12
+J8 pin 14: GND
+J8 pin 15: NC_J8_15_GPIO13
+J8 pin 16: NC_J8_16_SD2_GPIO9
+J8 pin 17: NC_J8_17_SD3_GPIO10
+J8 pin 18: NC_J8_18_CMD_GPIO11
+J8 pin 19: USB_5V
+
+J9 = oikea rima kuvassa, pin 1 ylhäällä, pin 19 alhaalla:
+J9 pin 01: GND
+J9 pin 02: NC_J9_2_GPIO23
+J9 pin 03: NC_J9_3_GPIO22
+J9 pin 04: NC_J9_4_TX0_GPIO1
+J9 pin 05: NC_J9_5_RX0_GPIO3
+J9 pin 06: NC_J9_6_GPIO21
+J9 pin 07: GND
+J9 pin 08: NC_J9_8_GPIO19
+J9 pin 09: NC_J9_9_GPIO18
+J9 pin 10: NC_J9_10_GPIO5
+J9 pin 11: NC_J9_11_GPIO17
+J9 pin 12: NC_J9_12_GPIO16
+J9 pin 13: GPIO4_DS18B20
+J9 pin 14: NC_J9_14_BOOT_GPIO0
+J9 pin 15: NC_J9_15_GPIO2
+J9 pin 16: NC_J9_16_GPIO15
+J9 pin 17: NC_J9_17_GPIO8
+J9 pin 18: NC_J9_18_GPIO7
+J9 pin 19: NC_J9_19_GPIO6
+
+Projektin käytetyt kytkennät:
+- GPIO26 -> J3 pin1 RELAY IN
+- GPIO34 -> R2 -> J4 pin1 SOIL AO
+- GPIO4  -> J5 pin1 DS18B20 DATA + R1 4.7k pull-up 3V3
+- GPIO27 -> J6 pin1 TANK SIG
+- GPIO25 -> R3 330R -> J7 pin1 LED+
+- 3V3 -> J4/J5/J6 anturit
+- USB_5V -> J3 pin3 relemoduulin VCC
+- GND yhteinen kaikkialla
+
+HUOM: tarkista vielä oman fyysisen ESP32 DevKitin pin1-suunta ennen tilausta.

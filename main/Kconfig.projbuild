@@ -1,0 +1,278 @@
+menu "Watering System"
+
+config WATERING_WIFI_SSID
+    string "WiFi SSID"
+    default ""
+    help
+        Home or office WiFi network name (2.4 GHz for ESP32).
+
+config WATERING_WIFI_PASSWORD
+    string "WiFi password"
+    default ""
+    help
+        Password for the selected WiFi network.
+
+config WATERING_WIFI_MAXIMUM_RETRY
+    int "WiFi maximum reconnect attempts"
+    default 10
+    range 1 100
+
+config WATERING_DRY_THRESHOLD
+    int "Dry soil threshold (ADC raw)"
+    default 3000
+    range 0 4095
+    help
+        Higher value means drier soil.
+
+config WATERING_MOISTURE_WET_ADC
+    int "Wet calibration point (ADC raw)"
+    default 1500
+    range 0 4095
+    help
+        Typical ADC value when soil is very wet.
+
+config WATERING_MOISTURE_DRY_ADC
+    int "Dry calibration point (ADC raw)"
+    default 3200
+    range 0 4095
+    help
+        Typical ADC value when soil is very dry.
+
+config WATERING_PUMP_ON_MS
+    int "Pump ON time (ms)"
+    default 8000
+    range 100 120000
+    help
+        Default watering duration. MQTT slider can override this at runtime.
+
+config WATERING_PUMP_DURATION_MIN_S
+    int "MQTT slider min pump duration (s)"
+    default 8
+    range 8 300
+
+config WATERING_PUMP_DURATION_MAX_S
+    int "MQTT slider max pump duration (s)"
+    default 20
+    range 8 600
+
+config WATERING_RELAY_SELF_TEST
+    bool "Enable relay self-test mode (1s ON / 1s OFF)"
+    default n
+    help
+        Runs relay in a continuous ON/OFF loop for wiring tests.
+        When enabled, normal watering logic is skipped.
+
+config WATERING_RELAY_SELF_TEST_INTERVAL_MS
+    int "Relay self-test ON/OFF interval (ms)"
+    default 1000
+    range 100 10000
+    depends on WATERING_RELAY_SELF_TEST
+    help
+        Duration for both ON and OFF phases in self-test mode.
+
+config WATERING_CHECK_INTERVAL_MS
+    int "Watering check interval (ms)"
+    default 60000
+    range 1000 86400000
+
+config WATERING_MQTT_CMD_ARM_DELAY_MS
+    int "Ignore MQTT command topics for N ms after reconnect"
+    default 5000
+    range 0 60000
+    help
+        Helps avoid stale retained command messages being applied right
+        after reconnect. Applies to pump enable/duration/manual/measure topics.
+
+config WATERING_DRY_CONSECUTIVE_READS
+    int "Consecutive dry reads before watering"
+    default 3
+    range 1 100
+    help
+        Requires repeated dry readings before pump activation.
+
+config WATERING_MIN_WATERING_INTERVAL_HOURS
+    int "Minimum hours between watering cycles"
+    default 72
+    range 0 720
+    help
+        Safety cooldown to prevent overwatering. Set 0 for test mode (no cooldown).
+
+config WATERING_ADC_SAMPLES
+    int "ADC samples per moisture read"
+    default 8
+    range 1 64
+    help
+        Averaging multiple samples reduces sensor noise.
+
+config WATERING_TEMPERATURE_ENABLED
+    bool "Enable DS18B20 outdoor temperature sensor"
+    default y
+    help
+        Enables DS18B20 1-Wire temperature reading and MQTT publish.
+
+config WATERING_TEMP_GPIO
+    int "DS18B20 data GPIO"
+    default 4
+    range 0 33
+    depends on WATERING_TEMPERATURE_ENABLED
+    help
+        GPIO used for DS18B20 DATA line. Add an external 4.7k pull-up
+        resistor between DATA and 3.3V near the ESP32.
+
+config WATERING_TEMP_READ_INTERVAL_MS
+    int "Temperature read interval (ms)"
+    default 10000
+    range 1000 3600000
+    depends on WATERING_TEMPERATURE_ENABLED
+    help
+        How often DS18B20 temperature is measured and published.
+
+config WATERING_LEVEL_SENSOR_GPIO
+    int "Tank level sensor signal GPIO (yellow wire)"
+    default 27
+    range 0 39
+    help
+        Digital input pin for capacitive liquid level sensor output.
+
+config WATERING_LEVEL_SENSOR_ACTIVE_STATE
+    int "Tank level sensor active state (1=FULL, 0=LOW)"
+    default 1
+    range 0 1
+    help
+        Defines which signal level means water present at sensor position.
+
+config WATERING_LEVEL_LED_GPIO
+    int "Tank level LED GPIO"
+    default 25
+    range 0 33
+    help
+        LED output pin for low/full tank indication.
+
+config WATERING_LEVEL_LED_ACTIVE_STATE
+    int "Tank level LED active state (1=ON at HIGH, 0=ON at LOW)"
+    default 1
+    range 0 1
+    help
+        Match this to your LED wiring.
+
+config WATERING_LEVEL_LED_ON_WHEN_LOW
+    bool "Turn LED ON when tank is LOW"
+    default y
+    help
+        If enabled, LED lights when water is low. If disabled, LED lights when tank is full.
+
+config WATERING_TIMEZONE
+    string "Timezone (TZ)"
+    default "EET-2EEST,M3.5.0/3,M10.5.0/4"
+    help
+        Finland timezone with daylight saving time.
+
+config WATERING_MQTT_BROKER_URI
+    string "MQTT broker URI"
+    default "mqtt://broker.hivemq.com"
+    help
+        Example: mqtt://192.168.1.10:1883 or mqtts://broker.example.com:8883
+
+config WATERING_MQTT_TOPIC
+    string "MQTT topic for soil values"
+    default "watering_system/soil"
+    help
+        Soil values are published as JSON to this topic.
+
+config WATERING_MQTT_TOPIC_MOISTURE_RAW
+    string "MQTT topic for raw soil value"
+    default "watering_system/soil/raw"
+    help
+        Raw ADC value for gauge/text panels.
+
+config WATERING_MQTT_TOPIC_MOISTURE_PERCENT
+    string "MQTT topic for dryness percent (0=wet,100=dry)"
+    default "watering_system/soil/dry_percent"
+    help
+        Recommended gauge value for blue/green/red ranges.
+
+config WATERING_MQTT_TOPIC_TEMPERATURE_C
+    string "MQTT topic for outdoor temperature (C)"
+    default "watering_system/temperature/outdoor_c"
+    depends on WATERING_TEMPERATURE_ENABLED
+    help
+        DS18B20 temperature in Celsius is published to this topic.
+
+config WATERING_MQTT_TOPIC_CMD_PUMP_DURATION_S
+    string "MQTT command topic: pump duration (seconds)"
+    default "watering_system/cmd/pump_duration_s"
+    help
+        Slider publishes integer seconds to this topic.
+
+config WATERING_MQTT_TOPIC_CMD_PUMP_MANUAL
+    string "MQTT command topic: manual pump run"
+    default "watering_system/cmd/pump_manual"
+    help
+        Button publishes RUN/ON/1 to trigger manual watering.
+
+config WATERING_MQTT_TOPIC_CMD_PUMP_ENABLE
+    string "MQTT command topic: pump enable switch"
+    default "watering_system/cmd/pump_enable"
+    help
+        Switch publishes ON/OFF to allow or block pump operation.
+
+config WATERING_MQTT_TOPIC_CMD_MEASURE_NOW
+    string "MQTT command topic: manual moisture measurement"
+    default "watering_system/cmd/measure_now"
+    help
+        Button publishes READ/MEASURE/1 to trigger immediate moisture publish.
+
+config WATERING_MQTT_TOPIC_STATUS_PUMP_DURATION_S
+    string "MQTT status topic: pump duration (seconds)"
+    default "watering_system/status/pump_duration_s"
+    help
+        Device publishes active pump duration here.
+
+config WATERING_MQTT_TOPIC_STATUS_PUMP_ENABLE
+    string "MQTT status topic: pump enable state"
+    default "watering_system/status/pump_enable"
+    help
+        Device publishes ON/OFF state for switch feedback.
+
+config WATERING_MQTT_TOPIC_STATUS_PUMP_RUNNING
+    string "MQTT status topic: pump running state"
+    default "watering_system/status/pump_running"
+    help
+        Device publishes ON while relay is active, OFF otherwise.
+
+config WATERING_MQTT_TOPIC_STATUS_TANK_LEVEL
+    string "MQTT status topic: tank level text (FULL/LOW/UNKNOWN)"
+    default "watering_system/status/tank_level"
+    help
+        Device publishes textual tank level state.
+
+config WATERING_MQTT_TOPIC_STATUS_TANK_LEVEL_RAW
+    string "MQTT status topic: tank level raw (-1/0/1)"
+    default "watering_system/status/tank_level_raw"
+    help
+        Device publishes raw tank level value: -1 unknown, 0 low, 1 full.
+
+config WATERING_MQTT_CLIENT_ID
+    string "MQTT client id"
+    default "watering-esp32"
+    help
+        Unique client id for this device on the broker.
+
+config WATERING_MQTT_USERNAME
+    string "MQTT username"
+    default ""
+    help
+        Leave empty if broker allows anonymous connections.
+
+config WATERING_MQTT_PASSWORD
+    string "MQTT password"
+    default ""
+    help
+        Leave empty if broker allows anonymous connections.
+
+config WATERING_MQTT_QOS
+    int "MQTT QoS for sensor messages"
+    default 1
+    range 0 2
+
+endmenu

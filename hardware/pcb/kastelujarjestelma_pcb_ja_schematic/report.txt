@@ -1,0 +1,240 @@
+Info: Processing symbol 'C1:Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm'.
+Info: Processing symbol 'J5:Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical'.
+Info: Processing symbol 'C2:Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm'.
+Info: Processing symbol 'C3:Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm'.
+Info: Processing symbol 'J4:Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical'.
+Info: Processing symbol 'C4:Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm'.
+Info: Processing symbol 'J2:TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal'.
+Info: Processing symbol 'J3:Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical'.
+Info: Processing symbol 'J1:TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal'.
+Info: Processing symbol 'J7:Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical'.
+Info: Processing symbol 'J6:Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical'.
+Info: Processing symbol 'J8:Connector_PinSocket_2.54mm:PinSocket_1x19_P2.54mm_Vertical'.
+Info: Processing symbol 'J9:Connector_PinSocket_2.54mm:PinSocket_1x19_P2.54mm_Vertical'.
+Info: Processing symbol 'R1:Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal'.
+Info: Processing symbol 'R2:Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal'.
+Info: Processing symbol 'R3:Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal'.
+Updated C1 sheetfile to 'irrigation_esp32_J8J9_KUVAN_MUKAINEN.kicad_sch'.
+Add net GND.
+Connected C1 pin 2 to GND.
+Add net +3.3V.
+Connected C1 pin 1 to +3.3V.
+Updated C1 unit metadata.
+Added C2 (footprint 'Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm').
+Changed REF** reference designator to C2.
+Changed C2 value from C_Disc_D5.0mm_W2.5mm_P2.50mm to 100nF near soil.
+Updated C2 symbol association from  to /d6aa60a1-88cd-4455-b2f5-6c455e267b92.
+Updated C2 sheetname to '/'.
+Updated C2 sheetfile to 'irrigation_esp32_J8J9_KUVAN_MUKAINEN.kicad_sch'.
+Connected C2 pin 1 to +3.3V.
+Connected C2 pin 2 to GND.
+Updated C2 unit metadata.
+Added C3 (footprint 'Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm').
+Changed REF** reference designator to C3.
+Changed C3 value from C_Disc_D5.0mm_W2.5mm_P2.50mm to 100nF optional ADC filter.
+Updated C3 symbol association from  to /b1b8f8b1-98e2-418a-a2a0-e8dff01e6c67.
+Updated C3 sheetname to '/'.
+Updated C3 sheetfile to 'irrigation_esp32_J8J9_KUVAN_MUKAINEN.kicad_sch'.
+Connected C3 pin 2 to GND.
+Connected C3 pin 1 to +3.3V.
+Updated C3 unit metadata.
+Added C4 (footprint 'Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm').
+Changed REF** reference designator to C4.
+Changed C4 value from C_Disc_D5.0mm_W2.5mm_P2.50mm to 100nF near tank sensor.
+Updated C4 symbol association from  to /a61d89f7-e535-439e-95ea-b609ed584d32.
+Updated C4 sheetname to '/'.
+Updated C4 sheetfile to 'irrigation_esp32_J8J9_KUVAN_MUKAINEN.kicad_sch'.
+Connected C4 pin 2 to GND.
+Connected C4 pin 1 to +3.3V.
+Updated C4 unit metadata.
+Added J1 (footprint 'TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal').
+Changed REF** reference designator to J1.
+Changed J1 value from TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal to PUMP_IN 5.08mm.
+Updated J1 symbol association from  to /df4fdfdc-345c-4314-85ff-3c7a3cf783d4.
+Updated J1 sheetname to '/'.
+Updated J1 sheetfile to 'irrigation_esp32_J8J9_KUVAN_MUKAINEN.kicad_sch'.
+Connected J1 pin 2 to GND.
+Add net +5V.
+Connected J1 pin 1 to +5V.
+Updated J1 unit metadata.
+Added J2 (footprint 'TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal').
+Changed REF** reference designator to J2.
+Changed J2 value from TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal to PUMP_OUT 5.08mm.
+Updated J2 symbol association from  to /52a8d773-613a-42f5-aadd-c3646717ac32.
+Updated J2 sheetname to '/'.
+Updated J2 sheetfile to 'irrigation_esp32_J8J9_KUVAN_MUKAINEN.kicad_sch'.
+Add net /PUMP_OUT+.
+Connected J2 pin 1 to /PUMP_OUT+.
+Connected J2 pin 2 to GND.
+Updated J2 unit metadata.
+Added J3 (footprint 'Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical').
+Changed REF** reference designator to J3.
+Changed J3 value from PinHeader_1x03_P2.54mm_Vertical to RELAY_CTRL IN/GND/VCC.
+Updated J3 symbol association from  to /609da12c-0c87-498b-9698-6cff94efed6b.
+Updated J3 sheetname to '/'.
+Updated J3 sheetfile to 'irrigation_esp32_J8J9_KUVAN_MUKAINEN.kicad_sch'.
+Connected J3 pin 3 to +3.3V.
+Add net /GPIO26_RELAY.
+Connected J3 pin 1 to /GPIO26_RELAY.
+Connected J3 pin 2 to GND.
+Updated J3 unit metadata.
+Added J4 (footprint 'Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical').
+Changed REF** reference designator to J4.
+Changed J4 value from PinHeader_1x03_P2.54mm_Vertical to SOIL_SENSOR AO/GND/VCC.
+Updated J4 symbol association from  to /e576c336-7a4c-4498-b2e4-e8cac8ef7e0f.
+Updated J4 sheetname to '/'.
+Updated J4 sheetfile to 'irrigation_esp32_J8J9_KUVAN_MUKAINEN.kicad_sch'.
+Connected J4 pin 3 to +3.3V.
+Add net /J4_AO_SOIL_RAW.
+Connected J4 pin 1 to /J4_AO_SOIL_RAW.
+Connected J4 pin 2 to GND.
+Updated J4 unit metadata.
+Added J5 (footprint 'Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical').
+Changed REF** reference designator to J5.
+Changed J5 value from PinHeader_1x03_P2.54mm_Vertical to DS18B20 DATA/VCC/GND.
+Updated J5 symbol association from  to /0a8a95e4-5ecc-4cf6-8c68-aa91ce6b42d8.
+Updated J5 sheetname to '/'.
+Updated J5 sheetfile to 'irrigation_esp32_J8J9_KUVAN_MUKAINEN.kicad_sch'.
+Connected J5 pin 2 to +3.3V.
+Connected J5 pin 3 to GND.
+Add net /GPIO4_DS18B20.
+Connected J5 pin 1 to /GPIO4_DS18B20.
+Updated J5 unit metadata.
+Added J6 (footprint 'Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical').
+Changed REF** reference designator to J6.
+Changed J6 value from PinHeader_1x03_P2.54mm_Vertical to TANK_LEVEL SIG/VCC/GND.
+Updated J6 symbol association from  to /22901d46-46c6-4b3c-9925-3d0d8888c864.
+Updated J6 sheetname to '/'.
+Updated J6 sheetfile to 'irrigation_esp32_J8J9_KUVAN_MUKAINEN.kicad_sch'.
+Connected J6 pin 3 to GND.
+Connected J6 pin 2 to +3.3V.
+Add net /GPIO27_TANK_SIG.
+Connected J6 pin 1 to /GPIO27_TANK_SIG.
+Updated J6 unit metadata.
+Added J7 (footprint 'Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical').
+Changed REF** reference designator to J7.
+Changed J7 value from PinHeader_1x02_P2.54mm_Vertical to TANK_LED LED+/GND.
+Updated J7 symbol association from  to /8a613fd8-4b93-4bad-a11a-ce1e41b0b67c.
+Updated J7 sheetname to '/'.
+Updated J7 sheetfile to 'irrigation_esp32_J8J9_KUVAN_MUKAINEN.kicad_sch'.
+Add net /LED_PLUS.
+Connected J7 pin 1 to /LED_PLUS.
+Connected J7 pin 2 to GND.
+Updated J7 unit metadata.
+Added C1 (footprint 'Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm').
+Added J8 (footprint 'Connector_PinSocket_2.54mm:PinSocket_1x19_P2.54mm_Vertical').
+Changed REF** reference designator to J8.
+Changed J8 value from PinSocket_1x19_P2.54mm_Vertical to ESP32_LEFT female 1x19.
+Updated J8 symbol association from  to /dfe4d59f-4863-4cdd-81cc-1a117c8d2e68.
+Updated J8 sheetname to '/'.
+Updated J8 sheetfile to 'irrigation_esp32_J8J9_KUVAN_MUKAINEN.kicad_sch'.
+Add net /SOIL_AO_GPIO34.
+Connected J8 pin 5 to /SOIL_AO_GPIO34.
+Add net /NC_J8_15_GPIO13.
+Connected J8 pin 15 to /NC_J8_15_GPIO13.
+Add net /NC_J8_6_GPIO35.
+Connected J8 pin 6 to /NC_J8_6_GPIO35.
+Connected J8 pin 1 to +3.3V.
+Connected J8 pin 10 to /GPIO26_RELAY.
+Add net /NC_J8_7_GPIO32.
+Connected J8 pin 7 to /NC_J8_7_GPIO32.
+Add net /GPIO25_TANK_LED.
+Connected J8 pin 9 to /GPIO25_TANK_LED.
+Add net /NC_J8_3_GPIO36.
+Connected J8 pin 3 to /NC_J8_3_GPIO36.
+Connected J8 pin 14 to GND.
+Add net /NC_J8_8_GPIO33.
+Connected J8 pin 8 to /NC_J8_8_GPIO33.
+Add net /NC_J8_18_CMD_GPIO11.
+Connected J8 pin 18 to /NC_J8_18_CMD_GPIO11.
+Add net /NC_J8_2_EN.
+Connected J8 pin 2 to /NC_J8_2_EN.
+Add net /NC_J8_13_GPIO12.
+Connected J8 pin 13 to /NC_J8_13_GPIO12.
+Connected J8 pin 19 to +5V.
+Add net /NC_J8_4_GPIO39.
+Connected J8 pin 4 to /NC_J8_4_GPIO39.
+Add net /NC_J8_12_GPIO14.
+Connected J8 pin 12 to /NC_J8_12_GPIO14.
+Add net /NC_J8_17_SD3_GPIO10.
+Connected J8 pin 17 to /NC_J8_17_SD3_GPIO10.
+Connected J8 pin 11 to /GPIO27_TANK_SIG.
+Add net /NC_J8_16_SD2_GPIO9.
+Connected J8 pin 16 to /NC_J8_16_SD2_GPIO9.
+Updated J8 unit metadata.
+Changed REF** reference designator to C1.
+Added J9 (footprint 'Connector_PinSocket_2.54mm:PinSocket_1x19_P2.54mm_Vertical').
+Changed REF** reference designator to J9.
+Changed J9 value from PinSocket_1x19_P2.54mm_Vertical to ESP32_RIGHT female 1x19.
+Updated J9 symbol association from  to /8f98fb17-6412-47bc-9ead-b1ee5134a4a6.
+Updated J9 sheetname to '/'.
+Updated J9 sheetfile to 'irrigation_esp32_J8J9_KUVAN_MUKAINEN.kicad_sch'.
+Add net /NC_J9_10_GPIO5.
+Connected J9 pin 10 to /NC_J9_10_GPIO5.
+Add net /NC_J9_12_GPIO16.
+Connected J9 pin 8 to /NC_J9_12_GPIO16.
+Add net /NC_J9_15_GPIO2.
+Connected J9 pin 5 to /NC_J9_15_GPIO2.
+Add net /NC_J9_2_GPIO23.
+Changed C1 value from C_Disc_D5.0mm_W2.5mm_P2.50mm to 100nF near DS18B20.
+Add net /NC_J9_18_GPIO7.
+Connected J9 pin 2 to /NC_J9_18_GPIO7.
+Add net /NC_J9_3_GPIO22.
+Connected J9 pin 17 to /NC_J9_3_GPIO22.
+Add net /NC_J9_16_GPIO15.
+Connected J9 pin 4 to /NC_J9_16_GPIO15.
+Add net /NC_J9_11_GPIO17.
+Connected J9 pin 9 to /NC_J9_11_GPIO17.
+Add net /NC_J9_5_RX0_GPIO3.
+Connected J9 pin 15 to /NC_J9_5_RX0_GPIO3.
+Connected J9 pin 19 to GND.
+Add net /NC_J9_19_GPIO6.
+Connected J9 pin 1 to /NC_J9_19_GPIO6.
+Add net /NC_J9_9_GPIO18.
+Connected J9 pin 11 to /NC_J9_9_GPIO18.
+Add net /NC_J9_6_GPIO21.
+Connected J9 pin 14 to /NC_J9_6_GPIO21.
+Add net /NC_J9_8_GPIO19.
+Connected J9 pin 12 to /NC_J9_8_GPIO19.
+Connected J9 pin 7 to /GPIO4_DS18B20.
+Add net /NC_J9_17_GPIO8.
+Connected J9 pin 3 to /NC_J9_17_GPIO8.
+Connected J9 pin 13 to GND.
+Add net /NC_J9_4_TX0_GPIO1.
+Connected J9 pin 16 to /NC_J9_4_TX0_GPIO1.
+Add net /NC_J9_14_BOOT_GPIO0.
+Connected J9 pin 6 to /NC_J9_14_BOOT_GPIO0.
+Updated J9 unit metadata.
+Connected J9 pin 18 to /NC_J9_2_GPIO23.
+Added R1 (footprint 'Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal').
+Changed REF** reference designator to R1.
+Changed R1 value from R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal to 4.7k DS18B20 pull-up.
+Updated R1 symbol association from  to /d8439bb2-c526-4d66-b4a9-43f492052bf1.
+Updated R1 sheetname to '/'.
+Updated R1 sheetfile to 'irrigation_esp32_J8J9_KUVAN_MUKAINEN.kicad_sch'.
+Connected R1 pin 2 to +3.3V.
+Connected R1 pin 1 to /GPIO4_DS18B20.
+Updated R1 unit metadata.
+Updated C1 symbol association from  to /00886970-a28d-493f-ad33-7e46a7a037cf.
+Added R2 (footprint 'Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal').
+Changed REF** reference designator to R2.
+Changed R2 value from R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal to 1k optional soil series.
+Updated R2 symbol association from  to /f4022447-6632-4876-98b5-21060c3d75dd.
+Updated R2 sheetname to '/'.
+Updated R2 sheetfile to 'irrigation_esp32_J8J9_KUVAN_MUKAINEN.kicad_sch'.
+Connected R2 pin 2 to /SOIL_AO_GPIO34.
+Connected R2 pin 1 to /J4_AO_SOIL_RAW.
+Updated R2 unit metadata.
+Updated C1 sheetname to '/'.
+Added R3 (footprint 'Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal').
+Changed REF** reference designator to R3.
+Changed R3 value from R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal to 330R LED series.
+Updated R3 symbol association from  to /ec21ec55-fa24-439b-9104-3f9167d2eade.
+Updated R3 sheetname to '/'.
+Updated R3 sheetfile to 'irrigation_esp32_J8J9_KUVAN_MUKAINEN.kicad_sch'.
+Connected R3 pin 1 to /GPIO25_TANK_LED.
+Connected R3 pin 2 to /LED_PLUS.
+Updated R3 unit metadata.
+
+
+Info: Total warnings: 0, errors: 0.

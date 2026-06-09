@@ -1,0 +1,15 @@
+Reference,Qty,Value,Footprint,Notes
+"J8,J9",2,"1x19 female header, 2.54mm",PinHeader_1x19_P2.54mm,"ESP32 DevKit socket headers, 25.4 mm row spacing on PCB"
+J1,1,2-pin screw terminal 5.08mm,TerminalBlock_1x02_P5.08mm,POWER_IN / pump supply
+J2,1,2-pin screw terminal 5.08mm,TerminalBlock_1x02_P5.08mm,PUMP_OUT
+J3,1,1x3 pin header 2.54mm,PinHeader_1x03_P2.54mm,"Relay module IN/GND/VCC, VCC=USB_5V"
+J4,1,1x3 pin header 2.54mm,PinHeader_1x03_P2.54mm,"SOIL_SENSOR: pin1 AO, pin2 GND, pin3 3V3"
+J5,1,1x3 pin header 2.54mm,PinHeader_1x03_P2.54mm,DS18B20: DATA/VCC/GND
+J6,1,1x3 pin header 2.54mm,PinHeader_1x03_P2.54mm,Tank level sensor: SIG/VCC/GND
+J7,1,1x2 pin header 2.54mm,PinHeader_1x02_P2.54mm,Tank LED LED+/GND
+J10,1,3-pin screw terminal 5.08mm,TerminalBlock_1x03_P5.08mm,Optional relay load NC/COM/NO
+R1,1,4.7k,R_Axial_DIN0207_P7.62mm,DS18B20 pull-up DATA to 3V3
+R2,1,1k optional,R_Axial_DIN0207_P7.62mm,Series resistor: J4 AO to GPIO34
+R3,1,330R,R_Axial_DIN0207_P7.62mm,LED series resistor
+"C1,C2,C4",3,100nF,C_Disc_D5.0mm_P2.50mm,"Decoupling near DS18B20, soil, tank connectors"
+C3,1,100nF optional,C_Disc_D5.0mm_P2.50mm,ADC filter: GPIO34 to GND

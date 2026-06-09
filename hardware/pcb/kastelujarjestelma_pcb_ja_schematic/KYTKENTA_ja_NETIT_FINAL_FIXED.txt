@@ -1,0 +1,20 @@
+J8/J9 korvaa ESP32 DevKitin.
+
+Käytetyt signaalit:
+GPIO26 -> J3 pin1 RELAY IN
+GPIO34 -> R2 -> J4 pin1 AO soil sensor
+GPIO4  -> J5 pin1 DS18B20 DATA + R1 4.7k pull-up to 3V3
+GPIO27 -> J6 pin1 tank sensor SIG
+GPIO25 -> R3 330R -> J7 pin1 LED+
+
+J4 SOIL_SENSOR, korjattu:
+Pin1 AO  -> R2 1k -> SOIL_AO_GPIO34 / ESP32 GPIO34
+Pin2 GND -> GND
+Pin3 VCC -> 3V3
+C2 100nF: 3V3 -> GND
+C3 100nF: SOIL_AO_GPIO34 -> GND
+
+Pumppu/rele:
+J1 pin1 PUMP_SUPPLY+ -> J10/K1 COM
+J10/K1 NO -> J2 pin1 PUMP_OUT+
+J1 pin2 ja J2 pin2 -> GND
