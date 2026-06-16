@@ -452,8 +452,4 @@ välillä.
   viestejä. Käytä tuotantokäytössä suojattua brokeria ja yksilöllisiä topic-
   nimiä.
 
-## Lisenssi
 
-Projektissa ei ole vielä lisenssitiedostoa. Ennen julkista julkaisua lisää
-projektiin sopiva `LICENSE`, jotta muut käyttäjät tietävät, miten ohjelmistoa,
-PCB-suunnitelmaa ja kotelomallia saa käyttää.
